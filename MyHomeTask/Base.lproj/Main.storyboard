@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="agu-wd-4NX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyHomeTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVN-ok-mXb">
+                                <rect key="frame" x="71" y="253" width="260" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add a new patient"/>
+                                <connections>
+                                    <action selector="addNewPatients:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Daz-Nn-BCs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-uJ-gnp">
+                                <rect key="frame" x="71" y="103" width="260" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="All patients"/>
+                                <connections>
+                                    <action selector="showPatients:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTx-01-mqc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIy-dm-6cp">
+                                <rect key="frame" x="71" y="181" width="260" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sick patients"/>
+                                <connections>
+                                    <action selector="showSickPatients:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c22-2g-zb2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gFf-uJ-gnp" firstAttribute="trailing" secondItem="cIy-dm-6cp" secondAttribute="trailing" id="9Rg-sw-Lb6"/>
+                            <constraint firstItem="gFf-uJ-gnp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="9WJ-af-QjX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gFf-uJ-gnp" secondAttribute="trailing" constant="62" id="MjD-cm-jUg"/>
+                            <constraint firstItem="cIy-dm-6cp" firstAttribute="trailing" secondItem="LVN-ok-mXb" secondAttribute="trailing" id="QOg-Ih-qRS"/>
+                            <constraint firstItem="gFf-uJ-gnp" firstAttribute="leading" secondItem="cIy-dm-6cp" secondAttribute="leading" id="c8j-gQ-NTc"/>
+                            <constraint firstItem="LVN-ok-mXb" firstAttribute="top" secondItem="cIy-dm-6cp" secondAttribute="bottom" constant="37" id="mH6-2V-0ZC"/>
+                            <constraint firstItem="gFf-uJ-gnp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uSh-fK-OpF"/>
+                            <constraint firstItem="cIy-dm-6cp" firstAttribute="leading" secondItem="LVN-ok-mXb" secondAttribute="leading" id="uq2-tz-8p5"/>
+                            <constraint firstItem="cIy-dm-6cp" firstAttribute="top" secondItem="gFf-uJ-gnp" secondAttribute="bottom" constant="43" id="wcm-We-oTh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2jp-Pg-xjL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
+        </scene>
+        <!--All Patients View Controller-->
+        <scene sceneID="H1P-fD-ZID">
+            <objects>
+                <tableViewController storyboardIdentifier="AllPatientsViewController" id="yqd-Nq-kma" customClass="AllPatientsViewController" customModule="MyHomeTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8Xx-Xl-rJ4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PBA-f8-LQm">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PBA-f8-LQm" id="opT-Mm-dzI">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yqd-Nq-kma" id="pmL-Rv-rhf"/>
+                            <outlet property="delegate" destination="yqd-Nq-kma" id="tkU-HT-eoC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNh-bj-HPy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1729" y="-27"/>
+        </scene>
+        <!--Add New Patients View Controller-->
+        <scene sceneID="ezp-nT-5sN">
+            <objects>
+                <viewController storyboardIdentifier="AddNewPatientsViewController" id="whJ-H5-adf" customClass="AddNewPatientsViewController" customModule="MyHomeTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zTm-HL-n3T">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8f6-Ah-Y0z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLg-OG-j54" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3112" y="-27"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="muw-ZW-ufM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="agu-wd-4NX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sYA-mo-GO9">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="a5p-U0-vDN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rlz-vr-qex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+        <!--Sick Patients View Controller-->
+        <scene sceneID="Oiy-Gu-1ie">
+            <objects>
+                <tableViewController storyboardIdentifier="SickPatientsViewController" id="293-fu-Iei" customClass="SickPatientsViewController" customModule="MyHomeTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="q4J-xu-bHw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3PX-xs-YHh">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3PX-xs-YHh" id="Zvv-st-6m3">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="293-fu-Iei" id="C6O-2v-cgF"/>
+                            <outlet property="delegate" destination="293-fu-Iei" id="tEs-Ty-2ee"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8pv-Js-0MX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2397.709923664122" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
